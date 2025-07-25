@@ -7,7 +7,7 @@
 
     <div class="relative z-10 flex flex-col min-h-screen">
       <nav class="p-4 md:p-6">
-        <NuxtLink to="/" class="flex items-center gap-2">
+        <NuxtLink to="/dashboard" class="flex items-center gap-2">
           <h1
             class="text-3xl md:text-4xl font-bold text-[#6F4E37] bg-[#FFF2D5] font-lora"
           >

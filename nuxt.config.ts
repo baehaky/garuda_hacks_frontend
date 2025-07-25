@@ -10,13 +10,12 @@ export default defineNuxtConfig({
     },
   },
   supabase: {
-    redirect: false, // biar kita kontrol manual redirect
+    redirect: false, 
   },
   app: {
     head: {
       title: "Kawan Aksara",
       link: [
-        // Tambahkan 3 baris ini
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "stylesheet",
@@ -28,11 +27,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     config: {
-      // Di sinilah semua kustomisasi Tailwind Anda berada
       theme: {
         extend: {
           fontFamily: {
-            // Daftarkan Lora di sini
             lora: ["Lora", "serif"],
           },
         },

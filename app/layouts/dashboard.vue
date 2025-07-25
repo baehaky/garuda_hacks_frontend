@@ -1,12 +1,32 @@
+<script setup>
+import { useAuth } from "/composable/useAuth";
+import test from "../assets/svg/Group 37.svg";
+import test1 from "../assets/svg/testtt.svg";
+const { logout } = useAuth();
+</script>
+
 <template>
+  <NuxtLink class="fixed top-[89px] left-4 z-50" to="/dashboard/belajar">
+    <img :src="test" class="w-[175px]" alt="" />
+  </NuxtLink>
+  <!-- <NuxtLink class="fixed bottom-[40px] left-4 z-50" to="/dashboard/belajar">
+    <img :src="test1" class="w-[175px]" alt="" />
+  </NuxtLink> -->
   <div class="main-layout">
     <div class="relative z-10 flex flex-col min-h-screen pb-24">
       <nav class="p-4 md:p-6">
         <div class="flex items-center gap-2">
-          <h1 class="text-3xl md:text-4xl font-bold text-[#4F200D] font-lora">
+          <h1 class="text-3xl md:text-4xl font-bold text-[#4F200D] bg-[#FFB22C] font-lora">
             KAWAN <br />
             AKSARA
           </h1>
+          <button
+            @click="logout"
+            class="ml-auto flex items-center gap-2 px-4 py-2 rounded-lg bg-red-600 hover:bg-red-700 text-white font-semibold shadow transition-colors duration-200"
+          >
+            <Icon name="mdi:logout" size="20" />
+            Keluar
+          </button>
         </div>
       </nav>
       <main class="flex-1 flex items-center">
@@ -24,7 +44,11 @@
           <Icon name="mdi:home" size="32" />
         </NuxtLink>
 
-        <NuxtLink to="/dashboard/translate" class="nav-link" aria-label="Translate">
+        <NuxtLink
+          to="/dashboard/translate"
+          class="nav-link"
+          aria-label="Translate"
+        >
           <Icon name="mdi:translate" size="32" />
         </NuxtLink>
 
@@ -36,7 +60,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .main-layout {
   background-image: url("~/assets/svg/test.svg");
   background-size: cover;

@@ -1,8 +1,8 @@
 <script setup>
 import mascotHappy from "~/assets/svg/maskothappy2.svg";
+import { useAuth } from "/composable/useAuth";
 
-import { ref } from "vue";
-const client = useSupabaseClient();
+const { register } = useAuth();
 const router = useRouter();
 
 const email = ref("");
@@ -14,44 +14,19 @@ const errorMsg = ref("");
 
 const registerUser = async () => {
   errorMsg.value = "";
-
-  console.log("Registering user:", {
-    email: email.value,
-    password: password.value,
-    first_name: first_name.value,
-    last_name: last_name.value,
-  });
-
   if (password.value !== passwordConfirm.value) {
     errorMsg.value = "Konfirmasi kata sandi tidak cocok.";
     return;
   }
-
   try {
-    const { data, error } = await client.auth.signUp({
+    await register({
       email: email.value,
       password: password.value,
+      first_name: first_name.value,
+      last_name: last_name.value,
     });
-
-    if (error) throw error;
-
-    if (data.user) {
-      console.log("Current User:", data.user);
-
-      const { error: updateError } = await client
-        .from("profiles")
-        .update({
-          first_name: first_name.value,
-          last_name: last_name.value,
-        })
-        .eq("id", data.user.id);
-
-      if (updateError) console.error("Update error:", updateError.message);
-    }
-
     router.push("/auth/confirm");
   } catch (error) {
-    console.error(error);
     errorMsg.value = error.message;
   }
 };

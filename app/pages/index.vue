@@ -1,5 +1,4 @@
 <script setup>
-import { NuxtLink } from "#components";
 import maskot from "~/assets/svg/maskot.svg";
 </script>
 

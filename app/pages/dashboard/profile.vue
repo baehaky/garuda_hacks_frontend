@@ -1,149 +1,105 @@
 <template>
   <div
-    class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-center"
-    :style="`background-image: url(${bgSvg})`"
+    class="w-full max-w-7xl mx-auto min-h-screen grid grid-cols-1 lg:grid-cols-3 gap-8 items-center px-10"
   >
-    <aside class="space-y-6 bg-[#F8D8A5]">
-      <div
-        class="bg-kawan-card-light border-4 border-kawan-brown rounded-3xl p-5 shadow-lg"
-      >
-        <div class="flex items-center space-x-4 flex-col">
+    <aside class="bg-[#FFF0D4] shadow-lg border-2 border-[#4F200D] rounded-3xl">
+      <div class="rounded-3xl p-5">
+        <div class="flex space-x-4 flex-col">
           <img
-            class="w-full h-32 rounded-2xl border-2 border-kawan-brown bg-yellow-400 object-cover"
-            src="https://i.imgur.com/8QW2aAv.png"
+            class="w-full h-32 rounded-2xl border-2 bg-yellow-400 object-contain"
+            :src="picture"
             alt="Avatar Mas Bro"
           />
-          <div>
-            <h2 class="text-2xl font-bold text-kawan-brown">Mas Bro</h2>
-            <p class="text-sm text-kawan-brown/80">@masbro_</p>
-            <p class="text-xs text-kawan-brown/70 mt-1">
-              Bergabung sejak Juli 2025
-            </p>
+          <div class="text-left">
+            <h2 class="text-2xl font-bold">username || "Pengguna"</h2>
+            <p class="text-sm">{{ username }}</p>
+            <p class="text-xs mt-1">Bergabung sejak {{ joinedAt }}</p>
           </div>
         </div>
       </div>
 
-      <div
-        class="bg-kawan-card-light border-4 border-kawan-brown rounded-3xl p-5 shadow-lg"
-      >
-        <h3 class="font-bold text-lg text-kawan-brown mb-3">
-          Bagian Statistik Belajar
-        </h3>
+      <div class="rounded-3xl p-5">
+        <h3 class="font-bold text-lg ml-5 mb-3">Bagian Statistik Belajar</h3>
         <div
           class="bg-kawan-card-dark rounded-2xl p-4 flex justify-around text-center"
         >
-          <div>
-            <p class="text-xs text-kawan-brown/80">Poin Total</p>
-            <p class="font-bold text-xl text-kawan-brown">1.100 Pt</p>
+          <div class="border-2 border-[#693D2C] p-5 rounded-xl bg-[#F8D8A5]">
+            <p class="text-xs">Poin Total</p>
+            <p class="font-bold text-xl">1.100 Pt</p>
           </div>
-          <div class="border-l-2 border-kawan-brown/50 h-12"></div>
-          <div>
-            <p class="text-xs text-kawan-brown/80">Runtunan Saiki</p>
-            <p class="font-bold text-xl text-kawan-brown">3 hari</p>
+          <div
+            class="border-2 border-[#693D2C] py-5 px-8 rounded-xl bg-[#F8D8A5]"
+          >
+            <p class="text-xs">Runtunan Saiki</p>
+            <p class="font-bold text-xl">3 hari</p>
           </div>
         </div>
       </div>
 
-      <div
-        class="bg-kawan-card-light border-4 border-kawan-brown rounded-3xl p-5 shadow-lg"
-      >
-        <h3 class="font-bold text-lg text-kawan-brown mb-3">
-          Tembung Dikuasai
-        </h3>
-        <div class="bg-kawan-card-dark rounded-2xl p-4 text-center">
-          <p class="font-bold text-xl text-kawan-brown">100 Kosakata</p>
-          <p class="text-sm text-kawan-brown/80">7 hari</p>
+      <div class="rounded-3xl p-5 ml-5 mr-5 shadow-lg">
+        <h3 class="font-bold text-lg mb-3">Tembung Dikuasai</h3>
+        <div
+          class="bg-kawan-card-dark rounded-2xl p-4 text-center border-2 border-[#693D2C] bg-[#F8D8A5]"
+        >
+          <p class="font-bold text-xl">100 Kosakata</p>
+          <p class="text-sm">7 hari</p>
         </div>
       </div>
     </aside>
 
-    <main class="flex justify-center order-first lg:order-none">
+    <main class="flex justify-center items-end mt-32">
       <img
-        src="https://i.imgur.com/x0RmzNo.png"
+        :src="picture1"
         alt="Avatar Kapibara Utama"
-        class="w-full max-w-sm drop-shadow-2xl"
+        class="w-72 drop-shadow-2xl"
       />
     </main>
 
-    <aside>
-      <div
-        class="bg-kawan-card-light border-4 border-kawan-brown rounded-3xl p-6 shadow-lg h-full space-y-4"
-      >
-        <h2 class="text-2xl font-bold text-kawan-brown text-center">
-          Galeri Ageman
-        </h2>
-
-        <div
-          class="bg-kawan-card-dark rounded-2xl p-4 border-2 border-kawan-brown/50"
-        >
-          <p class="font-semibold text-base text-kawan-brown">
-            Mendapatkan 100 Point
-          </p>
-          <div
-            class="w-full bg-[#EADBC0] rounded-full h-4 mt-2 overflow-hidden"
-          >
-            <div
-              class="bg-kawan-brown h-4 rounded-full"
-              style="width: 100%"
-            ></div>
-          </div>
-          <p class="text-right text-xs text-kawan-brown/80 mt-1">100 / 100</p>
-        </div>
-
-        <div
-          class="bg-kawan-card-dark rounded-2xl p-4 border-2 border-kawan-brown/50"
-        >
-          <p class="font-semibold text-base text-kawan-brown">
-            Jawadwipa Ngulandara
-          </p>
-          <div
-            class="w-full bg-[#EADBC0] rounded-full h-4 mt-2 overflow-hidden"
-          >
-            <div
-              class="bg-kawan-brown h-4 rounded-full"
-              style="width: 30%"
-            ></div>
-          </div>
-          <p class="text-right text-xs text-kawan-brown/80 mt-1">30 / 100</p>
-        </div>
-
-        <div
-          class="bg-kawan-card-dark rounded-2xl p-4 border-2 border-kawan-brown/50"
-        >
-          <p class="font-semibold text-base text-kawan-brown">Kanca Kapibara</p>
-          <div
-            class="w-full bg-[#EADBC0] rounded-full h-4 mt-2 overflow-hidden"
-          >
-            <div
-              class="bg-kawan-brown h-4 rounded-full"
-              style="width: 60%"
-            ></div>
-          </div>
-          <p class="text-right text-xs text-kawan-brown/80 mt-1">60 / 100</p>
-        </div>
-
-        <div
-          class="bg-kawan-card-dark rounded-2xl p-4 border-2 border-kawan-brown/50"
-        >
-          <p class="font-semibold text-base text-kawan-brown">Lali Wayah</p>
-          <div
-            class="w-full bg-[#EADBC0] rounded-full h-4 mt-2 overflow-hidden"
-          >
-            <div
-              class="bg-kawan-brown h-4 rounded-full"
-              style="width: 25%"
-            ></div>
-          </div>
-          <p class="text-right text-xs text-kawan-brown/80 mt-1">25 / 100</p>
-        </div>
-      </div>
-    </aside>
+    <div>
+      <img src="../../assets/image/Group 22.jpg" />
+    </div>
   </div>
 </template>
 
 <script setup>
 definePageMeta({
-  layout: "non-dashboard",
+  layout: "profile-dashboard",
 });
-import bgSvg from "@/assets/svg/bgprofile.svg";
+import picture from "../../assets/svg/image 10 2.svg";
+import picture1 from "../../assets/svg/maskotprofile.svg";
+
+import { ref, onMounted } from "vue";
+
+const user = useSupabaseUser();
+const username = ref("Udin");
+const joinedAt = ref("");
+
+const supabase = useSupabaseClient();
+
+onMounted(async () => {
+  if (!user.value) return;
+
+  const { data: profile, error } = await supabase
+    .from("profiles")
+    .select("first_name, last_name, picture, created_at")
+    .eq("id", user.value.id)
+    .single();
+
+  if (error) {
+    console.error("Gagal mengambil data profile:", error.message);
+  } else if (profile) {
+    // Set username
+    username.value =
+      `${profile.first_name || ""} ${profile.last_name || ""}`.trim() ||
+      user.value.email.split("@")[0];
+
+    // Set tanggal join
+    joinedAt.value = new Date(
+      profile.created_at || user.value.created_at
+    ).toLocaleDateString("id-ID", {
+      month: "long",
+      year: "numeric",
+    });
+  }
+});
 </script>

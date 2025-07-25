@@ -21,7 +21,7 @@
       class="w-74 md:w-96"
     />
   </div>
-  <section class="w-full flex-col">
+  <section class="w-full flex-col bg-[#FFB22C]">
     <div class="w-full flex justify-center items-center">
       <h1
         class="text-5xl text-center p-5 mb-5 rounded-lg border-4 border-[#443A2C] bg-[#F8D8A5] relative z-20"

@@ -1,9 +1,9 @@
-// File: login.vue
-
 <script setup>
+import { ref } from "vue";
 import mascotHappy from "~/assets/svg/maskothappy.svg";
+import { useAuth } from "/composable/useAuth";
 
-const client = useSupabaseClient();
+const { login } = useAuth();
 const router = useRouter();
 
 const email = ref("");
@@ -12,22 +12,13 @@ const errorMsg = ref("");
 
 const loginUser = async () => {
   try {
-    const { data, error } = await client.auth.signInWithPassword({
+    const { user, profile } = await login({
       email: email.value,
       password: password.value,
     });
-    if (error) throw error;
-
-    if (!data.user.email_confirmed_at) {
-      errorMsg.value = "Email belum dikonfirmasi. Silakan cek inbox Anda.";
-      await client.auth.signOut();
-      return;
-    }
-
-    // UBAH BARIS INI
     router.push("/dashboard");
   } catch (error) {
-    errorMsg.value = "Email atau kata sandi salah.";
+    errorMsg.value = error.message || "Email atau kata sandi salah.";
   }
 };
 </script>
