@@ -9,11 +9,11 @@ const { logout } = useAuth();
   <NuxtLink class="fixed top-[89px] left-4 z-50" to="/dashboard/belajar">
     <img :src="test" class="w-[175px]" alt="" />
   </NuxtLink>
-  <!-- <NuxtLink class="fixed bottom-[40px] left-4 z-50" to="/dashboard/belajar">
-    <img :src="test1" class="w-[175px]" alt="" />
-  </NuxtLink> -->
+  <NuxtLink class="fixed bottom-[135px] left-[250px] z-50" to="/dashboard/voiceassistant">
+    <img :src="test1" class="w-[150px]" alt="" />
+  </NuxtLink>
   <div class="main-layout">
-    <div class="relative z-10 flex flex-col min-h-screen pb-24">
+    <div class="relative z-10 flex flex-col min-h-screen ">
       <nav class="p-4 md:p-6">
         <div class="flex items-center gap-2">
           <h1 class="text-3xl md:text-4xl font-bold text-[#4F200D] bg-[#FFB22C] font-lora">
@@ -29,7 +29,7 @@ const { logout } = useAuth();
           </button>
         </div>
       </nav>
-      <main class="flex-1 flex items-center">
+      <main class="flex items-center">
         <slot />
       </main>
     </div>
