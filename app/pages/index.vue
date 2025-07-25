@@ -8,7 +8,7 @@ import maskot from "~/assets/svg/maskot.svg";
   >
     <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
       <h2
-        class="text-4xl sm:text-5xl lg:text-6xl -mt-20 max-w-md lg:max-w-lg text-center lg:text-center font-bold text-[#6F4E37] leading-tight font-lora"
+        class="text-4xl sm:text-5xl lg:text-6xl -mt-20 max-w-md lg:max-w-lg text-center lg:text-center font-bold text-[#6F4E37] leading-tight font-lora bg-[#FFF2D5]"
       >
         Mulai Petualangan Belajarmu Bersama Kawan Aksara!
       </h2>

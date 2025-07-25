@@ -2,7 +2,7 @@
   <div class="flex flex-col bg-cover bg-center bg-no-repeat bg-[#FFF2D5]">
     <div
       class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      :style="{ backgroundImage: `url(${heroBg})`, opacity: 0.3 }"
+      :style="{ backgroundImage: `url(${heroBg})`, opacity: 0.1 }"
     ></div>
 
     <div class="relative z-10 flex flex-col min-h-screen">
