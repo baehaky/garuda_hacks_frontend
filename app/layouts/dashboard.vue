@@ -3,7 +3,7 @@
     <div class="relative z-10 flex flex-col min-h-screen pb-24">
       <nav class="p-4 md:p-6">
         <div class="flex items-center gap-2">
-          <h1 class="text-3xl md:text-4xl font-bold text-[#6F4E37] font-lora">
+          <h1 class="text-3xl md:text-4xl font-bold text-[#4F200D] font-lora">
             KAWAN <br />
             AKSARA
           </h1>
@@ -18,7 +18,7 @@
       class="fixed bottom-0 left-0 right-0 h-24 flex justify-center items-center z-50"
     >
       <div
-        class="bg-[#4C2B1A] flex justify-around items-center gap-x-4 md:gap-x-8 px-6 py-3 rounded-full shadow-xl"
+        class="bg-[#4C2B1A] w-[60%] flex justify-around items-center gap-x-4 md:gap-x-8 px-6 py-3 rounded-lg shadow-xl"
       >
         <NuxtLink to="/dashboard" class="nav-link" aria-label="Dashboard">
           <Icon name="mdi:home" size="32" />

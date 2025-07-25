@@ -1,30 +1,16 @@
 <template>
-  <div class="fixed top-0 left-0 z-10">
-    <img
-      src="../assets/image/image1.png"
-      alt="Dekorasi awan kiri"
-      class="w-48 md:w-64"
-    />
-  </div>
-
-  <div class="fixed top-0 right-0 z-10">
-    <img
-      src="../assets/image/image.png"
-      alt="Dekorasi awan kanan"
-      class="w-64 md:w-96"
-    />
-  </div>
-  <div class="flex flex-col min-h-screen pb-24 bg-[#FFB22C]">
+  
+  <div class="flex flex-col bg-[#FFB22C] py-10 font-lora font-bold text-[#443A30]">
     <main class="flex-1 flex items-center">
       <slot />
     </main>
   </div>
 
   <div
-    class="fixed bottom-0 left-0 right-0 h-24 flex justify-center items-center z-50"
+    class="fixed bottom-0  left-0 right-0 h-24 flex justify-center items-center z-50"
   >
     <div
-      class="bg-[#4C2B1A] flex justify-around items-center gap-x-4 md:gap-x-8 px-6 py-3 rounded-full shadow-xl"
+      class="bg-[#4C2B1A] w-[60%] flex justify-around items-center gap-x-4 md:gap-x-8 px-6 py-3 rounded-lg shadow-xl"
     >
       <NuxtLink to="/dashboard" class="nav-link" aria-label="Dashboard">
         <Icon name="mdi:home" size="32" />

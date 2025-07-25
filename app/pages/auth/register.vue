@@ -28,7 +28,6 @@ const registerUser = async () => {
   }
 
   try {
-    // Sign up user
     const { data, error } = await client.auth.signUp({
       email: email.value,
       password: password.value,
@@ -36,12 +35,9 @@ const registerUser = async () => {
 
     if (error) throw error;
 
-    // Jika user berhasil dibuat
     if (data.user) {
       console.log("Current User:", data.user);
 
-      // Update kolom first_name & last_name di tabel profiles
-      // Row profiles otomatis dibuat oleh trigger `on_auth_user_created`
       const { error: updateError } = await client
         .from("profiles")
         .update({
@@ -53,7 +49,6 @@ const registerUser = async () => {
       if (updateError) console.error("Update error:", updateError.message);
     }
 
-    // Redirect ke halaman konfirmasi
     router.push("/auth/confirm");
   } catch (error) {
     console.error(error);
