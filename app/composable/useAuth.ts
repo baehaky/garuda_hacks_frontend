@@ -1,7 +1,7 @@
 // composables/useAuth.ts
 export const useAuth = () => {
   const supabase = useSupabaseClient();
-  const user = useSupabaseUser(); // reactive user dari supabase
+  const user = useSupabaseUser();
   const router = useRouter();
 
   // REGISTER USER

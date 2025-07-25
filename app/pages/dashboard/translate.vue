@@ -48,39 +48,3 @@ import bahasa2 from "@/assets/svg/bahasa2.svg";
 import bahasa3 from "@/assets/svg/bahasa3.svg";
 import maskot from "@/assets/svg/maskotTranslate.svg";
 </script>
-
-<!-- <template>
-  <section
-    class="flex flex-col items-center w-full space-y-6 p-6 bg-[#F8D8A5] rounded-lg shadow-lg border-4 border-[#443A2C]"
-  >
-    <h1 class="text-5xl font-bold text-center text-[#443A2C]">Aksara Jawa</h1>
-
-    <div class="flex flex-wrap justify-center gap-6">
-      <img
-        :src="bahasa1"
-        alt="Aksara Jawa 1"
-        class="w-full md:w-auto max-w-sm rounded-lg shadow border-2 border-[#443A2C]"
-      />
-      <img
-        :src="bahasa2"
-        alt="Aksara Jawa 2"
-        class="w-full md:w-auto max-w-sm rounded-lg shadow border-2 border-[#443A2C]"
-      />
-      <img
-        :src="bahasa3"
-        alt="Aksara Jawa 3"
-        class="w-full md:w-auto max-w-sm rounded-lg shadow border-2 border-[#443A2C]"
-      />
-    </div>
-  </section>
-</template>
-
-<script setup>
-definePageMeta({
-  layout: "non-dashboard",
-});
-
-import bahasa1 from "@/assets/svg/bahasa1.svg";
-import bahasa2 from "@/assets/svg/bahasa2.svg";
-import bahasa3 from "@/assets/svg/bahasa3.svg";
-</script> -->

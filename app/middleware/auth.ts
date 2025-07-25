@@ -1,4 +1,3 @@
-// middleware/auth.ts
 import { defineNuxtRouteMiddleware, navigateTo } from "nuxt/app";
 
 export default defineNuxtRouteMiddleware(() => {
